@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 
 import GuestName from './GuestName';
 import GuestNote from './GuestNote';
+const languages = ['JavaScript', 'Python', 'Java']; 
 
-const Guest = props =>  
+const Guest = props => 
+  
           	<li>
             	<GuestName 
                 isEditing={props.isEditing}
@@ -17,22 +19,18 @@ const Guest = props =>
               >{props.note}
               </GuestNote>
 
-              <label for="contactChoice1">
-                <input 
-                  type="radio"
-                  name="language"
-                  checked={props.isLanguage}
-                  onChange={props.handleLanguage} /> JavaScript
-              </label>
-
-              <label for="contactChoice2">
-                <input 
-                  type="radio" 
-                  name="language"
-                  checked={props.isLanguage}
-                onChange={props.handleLanguage} /> Python
-              </label>
-
+              {languages.map(function (lang){
+                return(
+                  <label for="contactChoice1">
+                    <input 
+                      type="radio"
+                      name="language"
+                      checked={props.isLanguage}
+                      onChange={props.handleLanguage} /> {lang}
+                  </label>
+                )
+              })}
+              
             	<label>
               		<input 
               			type="checkbox" 
