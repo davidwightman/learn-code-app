@@ -20,8 +20,7 @@ const GuestList = props =>
               isConfirmed={guest.isConfirmed}
               isLanguage={guest.isLanguage}
               isEditing={guest.isEditing}
-              // isConfirmed={note.isConfirmed}
-              // isEditing={note.isEditing}
+              //handleLanguage={() => props.}
               handleConfirmation={() => props.toggleConfirmation(guest.id)}
               handleToggleEditing={() => props.toggleEditing(guest.id)}
               setName={text => props.setName(text, guest.id)}

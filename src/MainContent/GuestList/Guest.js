@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import GuestName from './GuestName';
 import GuestNote from './GuestNote';
-const languages = ['JavaScript', 'Python', 'Java']; 
+const languages = ['JavaScript', 'Python', 'Java', 'Ruby']; 
 
 const Guest = props => 
   
@@ -19,9 +19,9 @@ const Guest = props =>
               >{props.note}
               </GuestNote>
 
-              {languages.map(function (lang){
+              {languages.map((lang, index) => {
                 return(
-                  <label for="contactChoice1">
+                  <label key={lang}>
                     <input 
                       type="radio"
                       name="language"
@@ -30,7 +30,6 @@ const Guest = props =>
                   </label>
                 )
               })}
-              
             	<label>
               		<input 
               			type="checkbox" 
