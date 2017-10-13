@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import GuestName from './GuestName';
 import GuestNote from './GuestNote';
-const languages = ['JavaScript', 'Python', 'Java', 'Ruby']; 
+const languages = ['JavaScript', 'Python', 'Java', 'Ruby', 'PHP']; 
 
 const Guest = props => 
   
